@@ -22,7 +22,7 @@ describe("Survey Model", function(){
         expect(result).to.equal("Error! Captcha input doesn't matched.");
     });
 
-    it('shiuld test ko pmuna', function(){
+    it('Should return the new captcha generated', function(){
         let surveyModel = new SurveyModel();
         let randomCaptcha = surveyModel.generateCaptcha();
         let captcha = surveyModel.captcha;
