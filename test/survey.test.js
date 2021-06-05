@@ -21,4 +21,12 @@ describe("Survey Model", function(){
 
         expect(result).to.equal("Error! Captcha input doesn't matched.");
     });
+
+    it('shiuld test ko pmuna', function(){
+        let surveyModel = new SurveyModel();
+        let randomCaptcha = surveyModel.generateCaptcha();
+        let captcha = surveyModel.captcha;
+
+        expect(randomCaptcha).to.equal(captcha);
+    });
 });

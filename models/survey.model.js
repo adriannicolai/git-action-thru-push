@@ -46,7 +46,8 @@ class SurveyModel extends Model {
 
 	// supply the logic for each function:
 	generateCaptcha(){
-		return ""; 
+		this.captcha = Math.floor(Math.random() * 99) +1; 
+		return this.captcha;
 	}
 
 	verifyCaptchaInput(input){
